@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/app1', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/app1', '-f', 'app1/Dockerfile', 'app1']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/app1']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
